@@ -1,0 +1,31 @@
+# Godot 4
+.godot/
+.import/
+*.translation
+
+# Exports / binaries
+android/
+dist/*.x86_64
+dist/*.exe
+dist/*.pck
+dist/*.zip
+dist/*.dll
+*.apk
+*.aab
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+
+# IDEs
+.idea/
+.vscode/
+*.csproj
+*.sln
+.mono/
+data_*/
+mono_crash.*.json
