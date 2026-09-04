@@ -24,3 +24,23 @@ def test_policy_forward_and_one_episode():
     loss.backward()
     assert policy.net[0].weight.grad is not None
     assert policy.net[-1].out_features == len(ACTIONS)
+
+
+def test_rollout_stores_categorical_entropy():
+    """Entropy bonus must use Categorical.entropy(), not -log π(a_t).
+
+    -mean(log_prob(sample)) is a biased stand-in: its gradient pushes the
+    sampled action's logit the opposite way from maximizing entropy when the
+    policy is peaked. collect_episode should keep per-step dist.entropy().
+    """
+    torch.manual_seed(0)
+    policy = PlayerMLP(hidden=32)
+    env = Grokkun26Env(seed=2)
+    env.reset(seed=2)
+    rollout = collect_episode(env, policy, max_steps=16)
+    assert hasattr(rollout, "entropies"), "Rollout missing entropies"
+    assert len(rollout.entropies) == len(rollout.rewards)
+    for H, lp in zip(rollout.entropies, rollout.log_probs):
+        assert torch.is_tensor(H)
+        # For a Categorical, entropy is not identically -log π(a).
+        assert not torch.allclose(H, -lp), (float(H), float(-lp))
