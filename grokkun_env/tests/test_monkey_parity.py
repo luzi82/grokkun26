@@ -7,7 +7,7 @@ from pathlib import Path
 
 from grokkun_env import ACTIONS, Grokkun26Env
 
-FIX = Path(__file__).parent / "fixtures" / "monkey_seed42_60.jsonl"
+FIX = Path(__file__).parent / "fixtures" / "monkey_seed42_120.jsonl"
 ATOL = 0.05
 
 
