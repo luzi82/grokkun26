@@ -5,7 +5,6 @@ signal died
 
 const MAX_SPEED := 102.0
 const ACCEL := 980.0
-const FRICTION := 1400.0
 const MARGIN := 6.0
 
 var velocity: Vector2 = Vector2.ZERO
@@ -34,7 +33,8 @@ func _physics_process(delta: float) -> void:
 		dir = dir.normalized()
 		velocity = velocity.move_toward(dir * MAX_SPEED, ACCEL * delta)
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		# Snap-stop on key release (no coasting slide).
+		velocity = Vector2.ZERO
 	global_position += velocity * delta
 	var field: Rect2 = GameState.FIELD
 	global_position.x = clampf(global_position.x, field.position.x + MARGIN, field.end.x - MARGIN)
