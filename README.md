@@ -94,3 +94,11 @@ GROKKUN_MONKEY=1 GROKKUN_SEED=42 GROKKUN_FRAMES=180 \
 
 PYTHONPATH=. python3 grokkun_env/monkey_verify.py dist/monkey_seed42.jsonl
 ```
+
+### Fixed-rule sanity check
+
+```bash
+PYTHONPATH=. python3 -m grokkun_env.sanity --policy flee --seeds 20 --compare
+```
+
+`flee` (away from nearest bullet) vs scripted spawner; `--compare` also runs `idle`.
