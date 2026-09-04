@@ -1,5 +1,5 @@
 extends Area2D
-## Tiny ship. Light inertia, snappy stop. Hitbox is slightly smaller than the sprite.
+## Grok Bot mascot (white body, black eyes). Snap-stop. Hitbox slightly smaller than sprite.
 
 signal died
 
