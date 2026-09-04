@@ -110,10 +110,12 @@ class Grokkun26Env:
         if self.dead:
             return self.observe(), 0.0, True, {"elapsed": self.elapsed}
 
+        # Godot tree order: Main (elapsed + spawn) before Player, then Bullets.
+        # Aiming therefore uses the pre-move player position this frame.
         dx, dy = self._parse_action(action)
-        self._integrate_player(dx, dy)
         self.elapsed += self.dt
         self._spawn_step()
+        self._integrate_player(dx, dy)
         self._integrate_bullets()
         hit = self._check_hit()
         if hit:
@@ -121,6 +123,9 @@ class Grokkun26Env:
             obs = self.observe()
             return obs, self.dt, True, {"elapsed": self.elapsed, "hit": True}
         return self.observe(), self.dt, False, {"elapsed": self.elapsed}
+
+    # Padded observation slots use radius < 0 so they are not live hits at (0,0).
+    PAD_RADIUS = -1.0
 
     def observe(self) -> dict:
         # Nearest bullets by distance to player (stable for RL).
@@ -131,9 +136,9 @@ class Grokkun26Env:
         bullet_flat: list[float] = []
         for b in ordered:
             bullet_flat.extend([b.x, b.y, b.vx, b.vy, b.radius, float(b.kind)])
-        pad = self.max_bullets_obs * 6 - len(bullet_flat)
-        if pad > 0:
-            bullet_flat.extend([0.0] * pad)
+        while len(bullet_flat) < self.max_bullets_obs * 6:
+            # x,y,vx,vy,radius,kind — radius sentinel marks unused slot.
+            bullet_flat.extend([0.0, 0.0, 0.0, 0.0, self.PAD_RADIUS, -1.0])
         return {
             "player": [self.px, self.py, self.pvx, self.pvy],
             "elapsed": self.elapsed,

@@ -104,3 +104,26 @@ def test_observation_padding_is_not_a_fake_bullet():
     for i in range(0, len(obs["bullets"]), 6):
         radius = obs["bullets"][i + 4]
         assert radius < 0.0, (i, obs["bullets"][i : i + 6])
+
+def test_frame_order_spawn_before_player_move():
+    """Godot: Main spawn uses pre-move player pos; player moves after."""
+    env = Grokkun26Env(seed=0)
+    env.reset(seed=0)
+    env.spawn_acc = 100.0  # guarantee at least one spawn this frame
+    before = (env.px, env.py)
+
+    # Capture aim target by wrapping _spawn_one.
+    aims: list[tuple[float, float]] = []
+    real = env._spawn_one
+
+    def wrapped():
+        # At spawn time player must still be at `before`.
+        aims.append((env.px, env.py))
+        return real()
+
+    env._spawn_one = wrapped  # type: ignore[method-assign]
+    env.step("e")
+    assert aims, "expected spawn"
+    assert aims[0] == before
+    assert (env.px, env.py) != before
+
