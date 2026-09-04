@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 
-from grokkun_env.env import ACTIONS, ACTION_TO_DIR, Grokkun26Env
+from grokkun_env.env import ACTIONS, Grokkun26Env
 
 
 def _dir_to_action(dx: float, dy: float) -> str:
