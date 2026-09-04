@@ -1,6 +1,7 @@
 extends Area2D
 
 var velocity: Vector2 = Vector2.ZERO
+var kind: int = 0
 
 const TEX_SMALL := preload("res://assets/bullet_small.png")
 const TEX_MED := preload("res://assets/bullet_med.png")
@@ -8,9 +9,10 @@ const TEX_BIG := preload("res://assets/bullet_big.png")
 const TEX_LIME := preload("res://assets/bullet_lime.png")
 
 
-func setup(pos: Vector2, vel: Vector2, kind: int) -> void:
+func setup(pos: Vector2, vel: Vector2, p_kind: int) -> void:
 	global_position = pos
 	velocity = vel
+	kind = p_kind
 	var sprite: Sprite2D = $Sprite2D
 	var cs := CircleShape2D.new()
 	match kind:

@@ -81,3 +81,16 @@ python3 -c "from grokkun_env import Grokkun26Env; e=Grokkun26Env(seed=0); print(
 ```
 
 See [docs/ROADMAP.md](docs/ROADMAP.md).
+
+## Godot ↔ Python monkey parity
+
+Record a seeded monkey run in Godot, then replay it in `Grokkun26Env`:
+
+```bash
+# needs display / Xvfb; imports textures once via: godot --path . --headless --import
+GROKKUN_MONKEY=1 GROKKUN_SEED=42 GROKKUN_FRAMES=180 \
+  GROKKUN_OUT=$PWD/dist/monkey_seed42.jsonl \
+  godot --path . --fixed-fps 60
+
+PYTHONPATH=. python3 grokkun_env/monkey_verify.py dist/monkey_seed42.jsonl
+```

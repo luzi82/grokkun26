@@ -21,6 +21,8 @@ var state: int = State.TITLE
 var elapsed: float = 0.0
 var spawn_acc: float = 0.0
 var rng := RandomNumberGenerator.new()
+var monkey: Node = null
+var monkey_mode: bool = false
 
 var hud_time: PixelText
 var title_name: PixelText
@@ -39,12 +41,39 @@ var flash_t: float = 0.0
 
 
 func _ready() -> void:
-	rng.randomize()
+	monkey_mode = OS.get_environment("GROKKUN_MONKEY") == "1"
+	if monkey_mode:
+		var seed := int(OS.get_environment("GROKKUN_SEED"))
+		if OS.get_environment("GROKKUN_SEED") == "":
+			seed = 42
+		rng.seed = seed
+	else:
+		rng.randomize()
 	player.died.connect(_on_player_died)
 	player.freeze()
 	player.place_center()
 	_build_ui()
 	_show_title()
+	if monkey_mode:
+		call_deferred("_monkey_boot")
+
+
+func _monkey_boot() -> void:
+	var seed := int(OS.get_environment("GROKKUN_SEED"))
+	if OS.get_environment("GROKKUN_SEED") == "":
+		seed = 42
+	var out_path := OS.get_environment("GROKKUN_OUT")
+	if out_path == "":
+		out_path = "user://monkey.jsonl"
+	var frames := int(OS.get_environment("GROKKUN_FRAMES"))
+	if frames <= 0:
+		frames = 300
+	monkey = Node.new()
+	monkey.set_script(load("res://scripts/monkey_recorder.gd"))
+	add_child(monkey)
+	monkey.setup(self, seed, out_path, frames)
+	_start_run()
+	monkey.begin()
 
 
 func _build_ui() -> void:
@@ -99,16 +128,19 @@ func _physics_process(delta: float) -> void:
 
 	match state:
 		State.TITLE:
-			title_prompt.visible = int(Time.get_ticks_msec() / 420) % 2 == 0
-			if Input.is_action_just_pressed("start"):
+			if not monkey_mode and title_prompt != null:
+				title_prompt.visible = int(Time.get_ticks_msec() / 420) % 2 == 0
+			if (not monkey_mode) and Input.is_action_just_pressed("start"):
 				_start_run()
 		State.PLAYING:
 			elapsed += delta
-			hud_time.text = "%.1f" % elapsed
+			if hud_time != null:
+				hud_time.text = "%.1f" % elapsed
 			_spawn_step(delta)
 		State.GAMEOVER:
-			over_prompt.visible = int(Time.get_ticks_msec() / 420) % 2 == 0
-			if Input.is_action_just_pressed("start"):
+			if not monkey_mode and over_prompt != null:
+				over_prompt.visible = int(Time.get_ticks_msec() / 420) % 2 == 0
+			if (not monkey_mode) and Input.is_action_just_pressed("start"):
 				_start_run()
 
 

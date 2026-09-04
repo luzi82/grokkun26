@@ -20,6 +20,8 @@ const TEX_NW := preload("res://assets/player_nw.png")
 var velocity: Vector2 = Vector2.ZERO
 var locked: bool = true
 var dead: bool = false
+var use_force_dir: bool = false
+var force_dir: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
@@ -31,14 +33,17 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 		return
 	var dir := Vector2.ZERO
-	if Input.is_action_pressed("move_left"):
-		dir.x -= 1.0
-	if Input.is_action_pressed("move_right"):
-		dir.x += 1.0
-	if Input.is_action_pressed("move_up"):
-		dir.y -= 1.0
-	if Input.is_action_pressed("move_down"):
-		dir.y += 1.0
+	if use_force_dir:
+		dir = force_dir
+	else:
+		if Input.is_action_pressed("move_left"):
+			dir.x -= 1.0
+		if Input.is_action_pressed("move_right"):
+			dir.x += 1.0
+		if Input.is_action_pressed("move_up"):
+			dir.y -= 1.0
+		if Input.is_action_pressed("move_down"):
+			dir.y += 1.0
 	if dir != Vector2.ZERO:
 		dir = dir.normalized()
 		velocity = velocity.move_toward(dir * MAX_SPEED, ACCEL * delta)

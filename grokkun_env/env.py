@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 import math
-import random
 from dataclasses import dataclass, field
 
 from grokkun_env import constants as C
+from grokkun_env.godot_rng import GodotRNG, f32
 
 # Discrete actions matching keyboard 8-way + idle.
 ACTIONS = (
@@ -34,12 +34,13 @@ ACTION_TO_DIR = {
 
 
 def _move_toward(x: float, y: float, tx: float, ty: float, delta: float) -> tuple[float, float]:
-    dx, dy = tx - x, ty - y
-    dist = math.hypot(dx, dy)
+    # Godot Vector2 uses float32 (real_t).
+    dx, dy = f32(tx - x), f32(ty - y)
+    dist = f32(math.hypot(dx, dy))
     if dist <= delta or dist == 0.0:
-        return tx, ty
-    s = delta / dist
-    return x + dx * s, y + dy * s
+        return f32(tx), f32(ty)
+    s = f32(delta / dist)
+    return f32(x + dx * s), f32(y + dy * s)
 
 
 def _spawn_interval(elapsed: float) -> float:
@@ -69,6 +70,8 @@ class Bullet:
     vy: float
     kind: int
     radius: float
+    # Godot: Area2D added mid-physics does not run _physics_process that frame.
+    moved: bool = False
 
 
 @dataclass
@@ -78,7 +81,7 @@ class Grokkun26Env:
     seed: int | None = None
     max_bullets_obs: int = 32
     dt: float = C.DT
-    rng: random.Random = field(init=False)
+    rng: GodotRNG = field(init=False)
     elapsed: float = 0.0
     spawn_acc: float = C.SPAWN_ACC_START
     px: float = 0.0
@@ -89,13 +92,13 @@ class Grokkun26Env:
     bullets: list[Bullet] = field(default_factory=list)
 
     def __post_init__(self) -> None:
-        self.rng = random.Random(self.seed)
+        self.rng = GodotRNG(0 if self.seed is None else int(self.seed))
 
     # -- API -----------------------------------------------------------------
     def reset(self, seed: int | None = None) -> dict:
         if seed is not None:
             self.seed = seed
-            self.rng = random.Random(seed)
+            self.rng = GodotRNG(int(seed))
         self.elapsed = 0.0
         self.spawn_acc = C.SPAWN_ACC_START
         self.px = C.FIELD_X + C.FIELD_W * 0.5
@@ -172,15 +175,19 @@ class Grokkun26Env:
             self.pvx, self.pvy = _move_toward(
                 self.pvx, self.pvy, tx, ty, C.PLAYER_ACCEL * self.dt
             )
-        self.px += self.pvx * self.dt
-        self.py += self.pvy * self.dt
-        self.px = min(
-            max(self.px, C.FIELD_X + C.PLAYER_MARGIN),
-            C.FIELD_X + C.FIELD_W - C.PLAYER_MARGIN,
+        self.px = f32(self.px + f32(self.pvx * self.dt))
+        self.py = f32(self.py + f32(self.pvy * self.dt))
+        self.px = f32(
+            min(
+                max(self.px, C.FIELD_X + C.PLAYER_MARGIN),
+                C.FIELD_X + C.FIELD_W - C.PLAYER_MARGIN,
+            )
         )
-        self.py = min(
-            max(self.py, C.FIELD_Y + C.PLAYER_MARGIN),
-            C.FIELD_Y + C.FIELD_H - C.PLAYER_MARGIN,
+        self.py = f32(
+            min(
+                max(self.py, C.FIELD_Y + C.PLAYER_MARGIN),
+                C.FIELD_Y + C.FIELD_H - C.PLAYER_MARGIN,
+            )
         )
 
     def _spawn_step(self) -> None:
@@ -189,66 +196,69 @@ class Grokkun26Env:
         while self.spawn_acc >= interval:
             self.spawn_acc -= interval
             self._spawn_one()
-            if self.elapsed > 18.0 and self.rng.random() < 0.16:
+            if self.elapsed > 18.0 and self.rng.randf() < 0.16:
                 self._spawn_one()
             interval = _spawn_interval(self.elapsed)
 
     def _spawn_one(self) -> None:
-        edge = self.rng.randrange(0, 4)
+        edge = self.rng.randi_range(0, 3)
         fx0, fy0 = C.FIELD_X, C.FIELD_Y
         fx1, fy1 = C.FIELD_X + C.FIELD_W, C.FIELD_Y + C.FIELD_H
         if edge == 0:
-            pos = (self.rng.uniform(fx0, fx1), fy0 - 8.0)
+            pos = (self.rng.randf_range(fx0, fx1), fy0 - 8.0)
         elif edge == 1:
-            pos = (self.rng.uniform(fx0, fx1), fy1 + 8.0)
+            pos = (self.rng.randf_range(fx0, fx1), fy1 + 8.0)
         elif edge == 2:
-            pos = (fx0 - 8.0, self.rng.uniform(fy0, fy1))
+            pos = (fx0 - 8.0, self.rng.randf_range(fy0, fy1))
         else:
-            pos = (fx1 + 8.0, self.rng.uniform(fy0, fy1))
+            pos = (fx1 + 8.0, self.rng.randf_range(fy0, fy1))
 
-        speed = _bullet_speed(self.elapsed) * self.rng.uniform(0.88, 1.14)
+        speed = _bullet_speed(self.elapsed) * self.rng.randf_range(0.88, 1.14)
         aim_p = min(max(0.22 + self.elapsed * 0.006, 0.22), 0.55)
-        if self.rng.random() < aim_p:
-            miss = self.rng.uniform(8.0, 34.0)
-            ang = self.rng.random() * math.tau
-            tx = self.px + math.cos(ang) * miss
-            ty = self.py + math.sin(ang) * miss
-            dx, dy = tx - pos[0], ty - pos[1]
+        if self.rng.randf() < aim_p:
+            miss = self.rng.randf_range(8.0, 34.0)
+            ang = f32(self.rng.randf() * math.tau)
+            tx = f32(self.px + f32(math.cos(ang) * miss))
+            ty = f32(self.py + f32(math.sin(ang) * miss))
+            dx, dy = f32(tx - pos[0]), f32(ty - pos[1])
         else:
             cx = fx0 + C.FIELD_W * 0.5
             cy = fy0 + C.FIELD_H * 0.5
             dx, dy = cx - pos[0], cy - pos[1]
             n = math.hypot(dx, dy) or 1.0
             dx, dy = dx / n, dy / n
-            jitter = math.radians(self.rng.uniform(-50.0, 50.0))
+            jitter = math.radians(self.rng.randf_range(-50.0, 50.0))
             cos_j, sin_j = math.cos(jitter), math.sin(jitter)
             dx, dy = dx * cos_j - dy * sin_j, dx * sin_j + dy * cos_j
-        n = math.hypot(dx, dy) or 1.0
-        vx, vy = dx / n * speed, dy / n * speed
+        n = f32(math.hypot(dx, dy) or 1.0)
+        vx, vy = f32(dx / n * speed), f32(dy / n * speed)
 
-        roll = self.rng.random()
+        roll = self.rng.randf()
         if self.elapsed > 25.0 and roll < 0.12:
             kind = 2
-            vx *= 0.62
-            vy *= 0.62
+            vx = f32(vx * 0.62)
+            vy = f32(vy * 0.62)
         elif roll < 0.18:
             kind = 3
-            vx *= 1.15
-            vy *= 1.15
+            vx = f32(vx * 1.15)
+            vy = f32(vy * 1.15)
         elif roll < 0.55:
             kind = 1
         else:
             kind = 0
         self.bullets.append(
-            Bullet(pos[0], pos[1], vx, vy, kind, C.BULLET_RADIUS[kind])
+            Bullet(f32(pos[0]), f32(pos[1]), vx, vy, kind, C.BULLET_RADIUS[kind])
         )
 
     def _integrate_bullets(self) -> None:
         x0, x1, y0, y1 = C.BULLET_CULL
         alive: list[Bullet] = []
         for b in self.bullets:
-            b.x += b.vx * self.dt
-            b.y += b.vy * self.dt
+            if b.moved:
+                b.x = f32(b.x + f32(b.vx * self.dt))
+                b.y = f32(b.y + f32(b.vy * self.dt))
+            else:
+                b.moved = True
             if x0 <= b.x <= x1 and y0 <= b.y <= y1:
                 alive.append(b)
         self.bullets = alive
