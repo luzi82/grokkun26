@@ -82,3 +82,25 @@ def test_survives_a_few_seconds_moving():
     # Not asserting survival — only that API stays healthy.
     assert "elapsed" in info
     assert math.isfinite(obs["player"][0])
+
+
+def test_observation_padding_is_not_a_fake_bullet():
+    """Empty / padded bullet slots must not look like a live bullet at (0,0).
+
+    observe() currently zero-fills the flat bullet vector, so an empty field
+    reads as 32 bullets at the origin with radius 0 — bad for a small MLP.
+    Prefer a mask channel, or a sentinel (e.g. radius < 0) on padded slots.
+    """
+    env = Grokkun26Env(seed=0)
+    env.reset()
+    env.bullets.clear()
+    obs = env.observe()
+    assert obs["bullet_count"] == 0
+    if "bullet_mask" in obs:
+        assert sum(obs["bullet_mask"]) == 0
+        return
+    # No mask: every padded slot's radius (index 4 in each 6-float record) must
+    # be a sentinel, not a real non-negative hit radius.
+    for i in range(0, len(obs["bullets"]), 6):
+        radius = obs["bullets"][i + 4]
+        assert radius < 0.0, (i, obs["bullets"][i : i + 6])
