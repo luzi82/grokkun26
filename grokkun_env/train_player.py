@@ -37,22 +37,25 @@ class PlayerMLP(nn.Module):
 class Rollout:
     log_probs: list[torch.Tensor]
     rewards: list[float]
+    entropies: list[torch.Tensor]
 
 
 def collect_episode(env: Grokkun26Env, policy: PlayerMLP, max_steps: int) -> Rollout:
     log_probs: list[torch.Tensor] = []
     rewards: list[float] = []
+    entropies: list[torch.Tensor] = []
     env.reset()
     for _ in range(max_steps):
         obs = torch.tensor(vectorize(env), dtype=torch.float32)
         dist = policy(obs)
         action = dist.sample()
         log_probs.append(dist.log_prob(action))
+        entropies.append(dist.entropy())
         _o, reward, done, _info = env.step(int(action.item()))
         rewards.append(float(reward))
         if done:
             break
-    return Rollout(log_probs=log_probs, rewards=rewards)
+    return Rollout(log_probs=log_probs, rewards=rewards, entropies=entropies)
 
 
 def discount_returns(rewards: list[float], gamma: float) -> list[float]:
@@ -124,12 +127,8 @@ def main() -> None:
             if adv.numel() > 1:
                 adv = (adv - adv.mean()) / (adv.std(unbiased=False) + 1e-8)
             pg = torch.stack([-lp * A for lp, A in zip(rollout.log_probs, adv)]).sum()
-            # Recompute entropy on last rollout via stored log_probs only — approximate
-            # by collecting again is wasteful; add small entropy from final dist proxy:
-            entropy_bonus = 0.0
-            # Use mean of -log_prob as rough entropy stand-in when one-hot sample.
-            entropy_bonus = -torch.stack(rollout.log_probs).mean()
-            loss = pg - args.entropy * entropy_bonus
+            entropy = torch.stack(rollout.entropies).mean()
+            loss = pg - args.entropy * entropy
             opt.zero_grad()
             loss.backward()
             nn.utils.clip_grad_norm_(policy.parameters(), 1.0)
