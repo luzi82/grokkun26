@@ -102,3 +102,12 @@ PYTHONPATH=. python3 -m grokkun_env.sanity --policy flee --seeds 20 --compare
 ```
 
 `flee` (away from nearest bullet) vs scripted spawner; `--compare` also runs `idle`.
+
+### Train player (CPU)
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements-train.txt
+PYTHONPATH=. .venv/bin/python -m grokkun_env.train_player --episodes 800 --out dist/player_mlp.pt
+```
+
+Checkpoint metrics: `grokkun_env/checkpoints/player_mlp_cpu_metrics.json`.
