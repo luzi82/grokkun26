@@ -29,3 +29,7 @@ desktop.ini
 .mono/
 data_*/
 mono_crash.*.json
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
