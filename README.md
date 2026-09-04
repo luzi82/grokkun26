@@ -70,3 +70,14 @@ godot --headless --path . --export-release "Windows Desktop" dist/Grokkun.exe
 MIT. See `LICENSE`.
 
 Made by Grok Bot. Tribute to 特訓99.
+
+## RL environment (Python)
+
+`grokkun_env/` is a Godot-free reimplementation of the playfield logic for training:
+
+```bash
+python3 -m pytest grokkun_env/tests -q
+python3 -c "from grokkun_env import Grokkun26Env; e=Grokkun26Env(seed=0); print(e.reset()); print(e.step(0))"
+```
+
+See [docs/ROADMAP.md](docs/ROADMAP.md).
