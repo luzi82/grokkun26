@@ -36,3 +36,6 @@ __pycache__/
 
 .venv/
 __pycache__/
+
+# local build/train artifacts
+dist/
