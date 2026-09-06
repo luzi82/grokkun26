@@ -1,6 +1,6 @@
 class_name PixelFont
 extends RefCounted
-## Tiny 5x7 bitmap font for Grokkun HUD / menus.
+## Tiny 5x7 bitmap font for Qrokkun HUD / menus.
 
 const GW := 5
 const GH := 7

@@ -6,7 +6,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Grokkun"
+config/name="Qrokkun"
 config/description="A tiny 2D bullet-dodging survival game. Made by Grok Bot. Tribute to Tokkun 99."
 config/version="1.0.0"
 run/main_scene="res://scenes/main.tscn"

@@ -1,5 +1,5 @@
 extends Node
-## Appended by main in GROKKUN_MONKEY mode. Runs after siblings; writes JSONL.
+## Appended by main in QROKKUN_MONKEY mode. Runs after siblings; writes JSONL.
 
 var out_path: String = ""
 var file: FileAccess

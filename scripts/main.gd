@@ -1,5 +1,5 @@
 extends Node2D
-## Grokkun — title / play / game-over. One endless wave.
+## Qrokkun — title / play / game-over. One endless wave.
 
 enum State { TITLE, PLAYING, GAMEOVER }
 
@@ -41,10 +41,10 @@ var flash_t: float = 0.0
 
 
 func _ready() -> void:
-	monkey_mode = OS.get_environment("GROKKUN_MONKEY") == "1"
+	monkey_mode = OS.get_environment("QROKKUN_MONKEY") == "1"
 	if monkey_mode:
-		var seed := int(OS.get_environment("GROKKUN_SEED"))
-		if OS.get_environment("GROKKUN_SEED") == "":
+		var seed := int(OS.get_environment("QROKKUN_SEED"))
+		if OS.get_environment("QROKKUN_SEED") == "":
 			seed = 42
 		rng.seed = seed
 	else:
@@ -59,13 +59,13 @@ func _ready() -> void:
 
 
 func _monkey_boot() -> void:
-	var seed := int(OS.get_environment("GROKKUN_SEED"))
-	if OS.get_environment("GROKKUN_SEED") == "":
+	var seed := int(OS.get_environment("QROKKUN_SEED"))
+	if OS.get_environment("QROKKUN_SEED") == "":
 		seed = 42
-	var out_path := OS.get_environment("GROKKUN_OUT")
+	var out_path := OS.get_environment("QROKKUN_OUT")
 	if out_path == "":
 		out_path = "user://monkey.jsonl"
-	var frames := int(OS.get_environment("GROKKUN_FRAMES"))
+	var frames := int(OS.get_environment("QROKKUN_FRAMES"))
 	if frames <= 0:
 		frames = 300
 	monkey = Node.new()
@@ -92,7 +92,7 @@ func _build_ui() -> void:
 
 	hud_time = _px("0.0", Vector2(160, 5), 1, COL_TIME, 1)
 
-	title_name = _px("GROKKUN", Vector2(160, 46), 3, COL_GOLD, 1)
+	title_name = _px("QROKKUN", Vector2(160, 46), 3, COL_GOLD, 1)
 	tokkun_sprite = Sprite2D.new()
 	tokkun_sprite.texture = TEX_TOKKUN
 	tokkun_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST

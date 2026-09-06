@@ -1,0 +1,391 @@
+params=23690 hidden=128 hours=2.75 flee_ref=16.68s idle_ref=7.76s
+ep=    0 surv=  5.10s eval=7.88s best=7.88s flee=16.68s wall=0.0m
+ep=   50 surv=  4.68s eval=6.96s best=7.88s flee=16.68s wall=0.4m
+ep=  100 surv=  5.95s eval=7.49s best=7.88s flee=16.68s wall=0.7m
+ep=  150 surv=  4.18s eval=7.47s best=7.88s flee=16.68s wall=1.1m
+ep=  200 surv=  4.70s eval=7.66s best=7.88s flee=16.68s wall=1.4m
+ep=  250 surv= 10.15s eval=6.97s best=7.88s flee=16.68s wall=1.8m
+ep=  300 surv=  5.48s eval=7.49s best=7.88s flee=16.68s wall=2.1m
+ep=  350 surv=  5.23s eval=7.49s best=7.88s flee=16.68s wall=2.5m
+ep=  400 surv=  7.15s eval=7.49s best=7.88s flee=16.68s wall=2.8m
+ep=  450 surv= 12.00s eval=7.49s best=7.88s flee=16.68s wall=3.2m
+ep=  500 surv=  6.08s eval=7.49s best=7.88s flee=16.68s wall=3.6m
+ep=  550 surv=  4.92s eval=7.49s best=7.88s flee=16.68s wall=3.9m
+ep=  600 surv=  6.25s eval=7.49s best=7.88s flee=16.68s wall=4.3m
+ep=  650 surv= 11.05s eval=7.49s best=7.88s flee=16.68s wall=4.6m
+ep=  700 surv=  5.10s eval=10.66s best=10.66s flee=16.68s wall=5.0m
+ep=  750 surv=  9.48s eval=8.61s best=10.66s flee=16.68s wall=5.4m
+ep=  800 surv=  5.38s eval=7.57s best=10.66s flee=16.68s wall=5.7m
+ep=  850 surv=  4.97s eval=7.48s best=10.66s flee=16.68s wall=6.1m
+ep=  900 surv= 10.42s eval=7.93s best=10.66s flee=16.68s wall=6.4m
+ep=  950 surv=  5.93s eval=7.49s best=10.66s flee=16.68s wall=6.8m
+ep= 1000 surv=  6.63s eval=7.49s best=10.66s flee=16.68s wall=7.1m
+ep= 1050 surv=  6.92s eval=7.49s best=10.66s flee=16.68s wall=7.5m
+ep= 1100 surv= 10.83s eval=7.49s best=10.66s flee=16.68s wall=7.9m
+ep= 1150 surv=  4.28s eval=7.04s best=10.66s flee=16.68s wall=8.3m
+ep= 1200 surv=  5.30s eval=8.84s best=10.66s flee=16.68s wall=8.6m
+ep= 1250 surv=  6.83s eval=7.82s best=10.66s flee=16.68s wall=9.0m
+ep= 1300 surv= 10.80s eval=9.36s best=10.66s flee=16.68s wall=9.4m
+ep= 1350 surv= 16.75s eval=7.81s best=10.66s flee=16.68s wall=9.7m
+ep= 1400 surv= 10.32s eval=9.02s best=10.66s flee=16.68s wall=10.1m
+ep= 1450 surv=  7.35s eval=11.75s best=11.75s flee=16.68s wall=10.5m
+ep= 1500 surv=  7.67s eval=9.25s best=11.75s flee=16.68s wall=10.9m
+ep= 1550 surv= 10.43s eval=9.52s best=11.75s flee=16.68s wall=11.3m
+ep= 1600 surv=  6.82s eval=9.39s best=11.75s flee=16.68s wall=11.7m
+ep= 1650 surv=  5.38s eval=9.73s best=11.75s flee=16.68s wall=12.0m
+ep= 1700 surv= 12.10s eval=7.89s best=11.75s flee=16.68s wall=12.4m
+ep= 1750 surv= 10.58s eval=7.16s best=11.75s flee=16.68s wall=12.8m
+ep= 1800 surv= 12.12s eval=9.19s best=11.75s flee=16.68s wall=13.2m
+ep= 1850 surv= 19.67s eval=8.54s best=11.75s flee=16.68s wall=13.6m
+ep= 1900 surv=  3.77s eval=8.34s best=11.75s flee=16.68s wall=14.0m
+ep= 1950 surv= 12.60s eval=8.45s best=11.75s flee=16.68s wall=14.3m
+ep= 2000 surv=  5.15s eval=9.95s best=11.75s flee=16.68s wall=14.7m
+ep= 2050 surv=  5.98s eval=11.36s best=11.75s flee=16.68s wall=15.0m
+ep= 2100 surv=  4.60s eval=10.61s best=11.75s flee=16.68s wall=15.4m
+ep= 2150 surv= 13.45s eval=8.83s best=11.75s flee=16.68s wall=15.8m
+ep= 2200 surv=  4.72s eval=9.05s best=11.75s flee=16.68s wall=16.1m
+ep= 2250 surv= 13.78s eval=8.22s best=11.75s flee=16.68s wall=16.5m
+ep= 2300 surv= 11.57s eval=9.44s best=11.75s flee=16.68s wall=16.9m
+ep= 2350 surv=  4.73s eval=11.10s best=11.75s flee=16.68s wall=17.3m
+ep= 2400 surv= 11.32s eval=9.36s best=11.75s flee=16.68s wall=17.7m
+ep= 2450 surv=  7.55s eval=7.88s best=11.75s flee=16.68s wall=18.1m
+ep= 2500 surv= 10.67s eval=10.00s best=11.75s flee=16.68s wall=18.5m
+ep= 2550 surv=  5.90s eval=11.10s best=11.75s flee=16.68s wall=18.9m
+ep= 2600 surv=  7.58s eval=9.12s best=11.75s flee=16.68s wall=19.2m
+ep= 2650 surv=  5.72s eval=10.52s best=11.75s flee=16.68s wall=19.6m
+ep= 2700 surv= 10.18s eval=10.13s best=11.75s flee=16.68s wall=20.0m
+ep= 2750 surv=  5.53s eval=10.25s best=11.75s flee=16.68s wall=20.3m
+ep= 2800 surv=  9.18s eval=8.68s best=11.75s flee=16.68s wall=20.6m
+ep= 2850 surv=  7.60s eval=9.07s best=11.75s flee=16.68s wall=21.0m
+ep= 2900 surv=  6.95s eval=8.79s best=11.75s flee=16.68s wall=21.3m
+ep= 2950 surv=  7.68s eval=10.56s best=11.75s flee=16.68s wall=21.7m
+ep= 3000 surv=  9.93s eval=9.97s best=11.75s flee=16.68s wall=22.1m
+ep= 3050 surv=  8.78s eval=8.18s best=11.75s flee=16.68s wall=22.5m
+ep= 3100 surv=  7.03s eval=8.58s best=11.75s flee=16.68s wall=22.9m
+ep= 3150 surv=  6.33s eval=8.73s best=11.75s flee=16.68s wall=23.3m
+ep= 3200 surv=  5.00s eval=9.35s best=11.75s flee=16.68s wall=23.7m
+ep= 3250 surv=  5.83s eval=9.77s best=11.75s flee=16.68s wall=24.1m
+ep= 3300 surv=  5.77s eval=9.24s best=11.75s flee=16.68s wall=24.4m
+ep= 3350 surv=  7.00s eval=9.08s best=11.75s flee=16.68s wall=24.9m
+ep= 3400 surv=  6.65s eval=7.54s best=11.75s flee=16.68s wall=25.3m
+ep= 3450 surv= 16.15s eval=9.59s best=11.75s flee=16.68s wall=25.7m
+ep= 3500 surv=  6.85s eval=9.27s best=11.75s flee=16.68s wall=26.1m
+ep= 3550 surv=  4.50s eval=9.48s best=11.75s flee=16.68s wall=26.5m
+ep= 3600 surv=  4.42s eval=9.32s best=11.75s flee=16.68s wall=26.9m
+ep= 3650 surv=  9.88s eval=10.00s best=11.75s flee=16.68s wall=27.3m
+ep= 3700 surv=  7.20s eval=9.65s best=11.75s flee=16.68s wall=27.8m
+ep= 3750 surv=  7.87s eval=9.32s best=11.75s flee=16.68s wall=28.2m
+ep= 3800 surv=  6.60s eval=9.84s best=11.75s flee=16.68s wall=28.6m
+ep= 3850 surv= 10.93s eval=10.15s best=11.75s flee=16.68s wall=29.0m
+ep= 3900 surv= 14.55s eval=9.05s best=11.75s flee=16.68s wall=29.4m
+ep= 3950 surv=  7.78s eval=10.07s best=11.75s flee=16.68s wall=29.8m
+ep= 4000 surv=  6.47s eval=9.31s best=11.75s flee=16.68s wall=30.2m
+ep= 4050 surv=  5.17s eval=12.27s best=12.27s flee=16.68s wall=30.6m
+ep= 4100 surv=  8.00s eval=8.96s best=12.27s flee=16.68s wall=31.0m
+ep= 4150 surv=  6.77s eval=9.31s best=12.27s flee=16.68s wall=31.4m
+ep= 4200 surv= 10.60s eval=11.28s best=12.27s flee=16.68s wall=31.8m
+ep= 4250 surv=  7.12s eval=7.89s best=12.27s flee=16.68s wall=32.2m
+ep= 4300 surv=  9.23s eval=9.20s best=12.27s flee=16.68s wall=32.6m
+ep= 4350 surv=  6.62s eval=9.53s best=12.27s flee=16.68s wall=33.0m
+ep= 4400 surv=  5.25s eval=9.38s best=12.27s flee=16.68s wall=33.4m
+ep= 4450 surv=  9.97s eval=9.26s best=12.27s flee=16.68s wall=33.8m
+ep= 4500 surv= 13.78s eval=10.94s best=12.27s flee=16.68s wall=34.2m
+ep= 4550 surv=  4.87s eval=10.93s best=12.27s flee=16.68s wall=34.6m
+ep= 4600 surv=  7.43s eval=9.10s best=12.27s flee=16.68s wall=35.0m
+ep= 4650 surv=  7.25s eval=8.40s best=12.27s flee=16.68s wall=35.4m
+ep= 4700 surv=  8.48s eval=10.31s best=12.27s flee=16.68s wall=35.8m
+ep= 4750 surv= 11.18s eval=8.77s best=12.27s flee=16.68s wall=36.2m
+ep= 4800 surv=  7.22s eval=11.26s best=12.27s flee=16.68s wall=36.6m
+ep= 4850 surv= 10.55s eval=12.41s best=12.41s flee=16.68s wall=37.0m
+ep= 4900 surv=  9.12s eval=11.08s best=12.41s flee=16.68s wall=37.4m
+ep= 4950 surv=  6.33s eval=10.82s best=12.41s flee=16.68s wall=37.8m
+ep= 5000 surv=  7.52s eval=11.29s best=12.41s flee=16.68s wall=38.3m
+ep= 5050 surv=  4.95s eval=11.07s best=12.41s flee=16.68s wall=38.6m
+ep= 5100 surv=  3.63s eval=11.03s best=12.41s flee=16.68s wall=39.0m
+ep= 5150 surv=  3.93s eval=11.10s best=12.41s flee=16.68s wall=39.4m
+ep= 5200 surv=  7.05s eval=11.32s best=12.41s flee=16.68s wall=39.8m
+ep= 5250 surv=  6.70s eval=11.75s best=12.41s flee=16.68s wall=40.2m
+ep= 5300 surv=  5.18s eval=11.14s best=12.41s flee=16.68s wall=40.6m
+ep= 5350 surv=  5.52s eval=11.81s best=12.41s flee=16.68s wall=41.1m
+ep= 5400 surv=  3.22s eval=11.15s best=12.41s flee=16.68s wall=41.5m
+ep= 5450 surv= 16.23s eval=11.30s best=12.41s flee=16.68s wall=41.9m
+ep= 5500 surv=  8.23s eval=11.01s best=12.41s flee=16.68s wall=42.3m
+ep= 5550 surv= 10.23s eval=10.20s best=12.41s flee=16.68s wall=42.8m
+ep= 5600 surv= 13.38s eval=10.26s best=12.41s flee=16.68s wall=43.2m
+ep= 5650 surv= 10.28s eval=10.58s best=12.41s flee=16.68s wall=43.6m
+ep= 5700 surv=  4.88s eval=10.28s best=12.41s flee=16.68s wall=44.0m
+ep= 5750 surv=  3.82s eval=9.64s best=12.41s flee=16.68s wall=44.4m
+ep= 5800 surv=  9.13s eval=10.12s best=12.41s flee=16.68s wall=44.8m
+ep= 5850 surv=  6.35s eval=10.12s best=12.41s flee=16.68s wall=45.2m
+ep= 5900 surv=  9.80s eval=11.37s best=12.41s flee=16.68s wall=45.6m
+ep= 5950 surv=  7.87s eval=9.51s best=12.41s flee=16.68s wall=46.0m
+ep= 6000 surv=  5.37s eval=12.42s best=12.42s flee=16.68s wall=46.4m
+ep= 6050 surv=  4.10s eval=11.67s best=12.42s flee=16.68s wall=46.9m
+ep= 6100 surv=  9.82s eval=9.76s best=12.42s flee=16.68s wall=47.3m
+ep= 6150 surv=  5.12s eval=9.97s best=12.42s flee=16.68s wall=47.7m
+ep= 6200 surv=  4.77s eval=11.33s best=12.42s flee=16.68s wall=48.2m
+ep= 6250 surv=  6.38s eval=10.71s best=12.42s flee=16.68s wall=48.6m
+ep= 6300 surv=  9.55s eval=10.53s best=12.42s flee=16.68s wall=49.0m
+ep= 6350 surv=  6.90s eval=9.14s best=12.42s flee=16.68s wall=49.5m
+ep= 6400 surv=  5.65s eval=11.06s best=12.42s flee=16.68s wall=49.9m
+ep= 6450 surv=  4.77s eval=12.29s best=12.42s flee=16.68s wall=50.3m
+ep= 6500 surv= 15.50s eval=11.27s best=12.42s flee=16.68s wall=50.8m
+ep= 6550 surv=  8.48s eval=8.49s best=12.42s flee=16.68s wall=51.1m
+ep= 6600 surv= 20.40s eval=9.61s best=12.42s flee=16.68s wall=51.6m
+ep= 6650 surv=  4.33s eval=7.32s best=12.42s flee=16.68s wall=52.0m
+ep= 6700 surv=  5.43s eval=11.41s best=12.42s flee=16.68s wall=52.4m
+ep= 6750 surv=  7.08s eval=9.69s best=12.42s flee=16.68s wall=52.8m
+ep= 6800 surv=  8.68s eval=11.35s best=12.42s flee=16.68s wall=53.3m
+ep= 6850 surv=  6.27s eval=11.72s best=12.42s flee=16.68s wall=53.7m
+ep= 6900 surv=  9.27s eval=10.05s best=12.42s flee=16.68s wall=54.1m
+ep= 6950 surv=  5.87s eval=11.25s best=12.42s flee=16.68s wall=54.5m
+ep= 7000 surv= 11.87s eval=10.90s best=12.42s flee=16.68s wall=54.9m
+ep= 7050 surv=  8.68s eval=10.65s best=12.42s flee=16.68s wall=55.3m
+ep= 7100 surv=  6.28s eval=9.89s best=12.42s flee=16.68s wall=55.7m
+ep= 7150 surv=  5.85s eval=9.92s best=12.42s flee=16.68s wall=56.1m
+ep= 7200 surv= 12.45s eval=10.92s best=12.42s flee=16.68s wall=56.5m
+ep= 7250 surv=  7.83s eval=9.61s best=12.42s flee=16.68s wall=56.9m
+ep= 7300 surv=  6.80s eval=9.40s best=12.42s flee=16.68s wall=57.3m
+ep= 7350 surv=  6.25s eval=9.15s best=12.42s flee=16.68s wall=57.7m
+ep= 7400 surv=  5.52s eval=10.04s best=12.42s flee=16.68s wall=58.1m
+ep= 7450 surv= 13.33s eval=10.20s best=12.42s flee=16.68s wall=58.5m
+ep= 7500 surv=  7.43s eval=12.09s best=12.42s flee=16.68s wall=58.9m
+ep= 7550 surv=  4.83s eval=11.20s best=12.42s flee=16.68s wall=59.3m
+ep= 7600 surv=  9.20s eval=10.29s best=12.42s flee=16.68s wall=59.7m
+ep= 7650 surv= 14.35s eval=10.79s best=12.42s flee=16.68s wall=60.2m
+ep= 7700 surv=  6.72s eval=9.98s best=12.42s flee=16.68s wall=60.6m
+ep= 7750 surv= 10.50s eval=10.18s best=12.42s flee=16.68s wall=61.0m
+ep= 7800 surv=  8.63s eval=11.07s best=12.42s flee=16.68s wall=61.5m
+ep= 7850 surv= 14.37s eval=12.39s best=12.42s flee=16.68s wall=61.9m
+ep= 7900 surv= 20.50s eval=10.17s best=12.42s flee=16.68s wall=62.3m
+ep= 7950 surv=  4.00s eval=9.98s best=12.42s flee=16.68s wall=62.7m
+ep= 8000 surv=  9.95s eval=11.39s best=12.42s flee=16.68s wall=63.1m
+ep= 8050 surv=  7.33s eval=10.98s best=12.42s flee=16.68s wall=63.5m
+ep= 8100 surv=  8.87s eval=11.55s best=12.42s flee=16.68s wall=63.9m
+ep= 8150 surv= 20.68s eval=12.37s best=12.42s flee=16.68s wall=64.3m
+ep= 8200 surv=  4.92s eval=11.22s best=12.42s flee=16.68s wall=64.8m
+ep= 8250 surv=  6.65s eval=11.66s best=12.42s flee=16.68s wall=65.2m
+ep= 8300 surv=  5.55s eval=11.41s best=12.42s flee=16.68s wall=65.6m
+ep= 8350 surv= 18.88s eval=9.96s best=12.42s flee=16.68s wall=66.0m
+ep= 8400 surv= 23.72s eval=11.17s best=12.42s flee=16.68s wall=66.5m
+ep= 8450 surv=  7.23s eval=9.64s best=12.42s flee=16.68s wall=66.9m
+ep= 8500 surv=  5.78s eval=12.25s best=12.42s flee=16.68s wall=67.4m
+ep= 8550 surv= 11.78s eval=11.03s best=12.42s flee=16.68s wall=67.8m
+ep= 8600 surv=  4.47s eval=10.47s best=12.42s flee=16.68s wall=68.2m
+ep= 8650 surv= 16.82s eval=11.96s best=12.42s flee=16.68s wall=68.6m
+ep= 8700 surv= 17.82s eval=9.69s best=12.42s flee=16.68s wall=69.0m
+ep= 8750 surv= 19.23s eval=12.30s best=12.42s flee=16.68s wall=69.6m
+ep= 8800 surv=  8.52s eval=11.31s best=12.42s flee=16.68s wall=70.0m
+ep= 8850 surv=  5.43s eval=10.00s best=12.42s flee=16.68s wall=70.4m
+ep= 8900 surv= 12.97s eval=10.03s best=12.42s flee=16.68s wall=70.9m
+ep= 8950 surv= 13.67s eval=11.92s best=12.42s flee=16.68s wall=71.4m
+ep= 9000 surv= 15.43s eval=10.93s best=12.42s flee=16.68s wall=71.8m
+ep= 9050 surv= 19.42s eval=11.00s best=12.42s flee=16.68s wall=72.2m
+ep= 9100 surv=  9.22s eval=11.78s best=12.42s flee=16.68s wall=72.7m
+ep= 9150 surv=  8.27s eval=12.17s best=12.42s flee=16.68s wall=73.1m
+ep= 9200 surv=  7.60s eval=11.05s best=12.42s flee=16.68s wall=73.5m
+ep= 9250 surv=  5.85s eval=11.77s best=12.42s flee=16.68s wall=73.9m
+ep= 9300 surv=  5.23s eval=10.39s best=12.42s flee=16.68s wall=74.3m
+ep= 9350 surv=  5.90s eval=12.02s best=12.42s flee=16.68s wall=74.8m
+ep= 9400 surv= 13.27s eval=11.88s best=12.42s flee=16.68s wall=75.3m
+ep= 9450 surv=  9.72s eval=11.58s best=12.42s flee=16.68s wall=75.7m
+ep= 9500 surv=  6.48s eval=10.02s best=12.42s flee=16.68s wall=76.2m
+ep= 9550 surv= 13.80s eval=11.29s best=12.42s flee=16.68s wall=76.6m
+ep= 9600 surv=  4.97s eval=10.77s best=12.42s flee=16.68s wall=77.1m
+ep= 9650 surv=  8.78s eval=9.56s best=12.42s flee=16.68s wall=77.5m
+ep= 9700 surv= 15.32s eval=10.59s best=12.42s flee=16.68s wall=77.9m
+ep= 9750 surv=  7.47s eval=11.44s best=12.42s flee=16.68s wall=78.4m
+ep= 9800 surv=  8.60s eval=11.04s best=12.42s flee=16.68s wall=78.8m
+ep= 9850 surv=  9.18s eval=10.95s best=12.42s flee=16.68s wall=79.2m
+ep= 9900 surv=  4.87s eval=11.99s best=12.42s flee=16.68s wall=79.7m
+ep= 9950 surv= 13.65s eval=11.49s best=12.42s flee=16.68s wall=80.2m
+ep=10000 surv=  7.83s eval=9.43s best=12.42s flee=16.68s wall=80.6m
+ep=10050 surv=  7.87s eval=9.16s best=12.42s flee=16.68s wall=81.0m
+ep=10100 surv=  6.67s eval=8.53s best=12.42s flee=16.68s wall=81.4m
+ep=10150 surv=  5.92s eval=10.35s best=12.42s flee=16.68s wall=81.9m
+ep=10200 surv= 11.33s eval=10.79s best=12.42s flee=16.68s wall=82.3m
+ep=10250 surv= 12.88s eval=10.65s best=12.42s flee=16.68s wall=82.8m
+ep=10300 surv=  7.15s eval=10.52s best=12.42s flee=16.68s wall=83.3m
+ep=10350 surv=  9.87s eval=10.26s best=12.42s flee=16.68s wall=83.7m
+ep=10400 surv= 11.03s eval=9.90s best=12.42s flee=16.68s wall=84.2m
+ep=10450 surv= 11.83s eval=10.66s best=12.42s flee=16.68s wall=84.6m
+ep=10500 surv=  8.08s eval=12.56s best=12.56s flee=16.68s wall=85.0m
+ep=10550 surv=  4.72s eval=10.82s best=12.56s flee=16.68s wall=85.5m
+ep=10600 surv=  7.27s eval=11.54s best=12.56s flee=16.68s wall=85.9m
+ep=10650 surv=  5.05s eval=12.10s best=12.56s flee=16.68s wall=86.4m
+ep=10700 surv= 15.47s eval=10.95s best=12.56s flee=16.68s wall=86.8m
+ep=10750 surv= 15.32s eval=11.22s best=12.56s flee=16.68s wall=87.3m
+ep=10800 surv=  4.80s eval=10.72s best=12.56s flee=16.68s wall=87.7m
+ep=10850 surv=  8.55s eval=10.69s best=12.56s flee=16.68s wall=88.2m
+ep=10900 surv=  6.37s eval=10.94s best=12.56s flee=16.68s wall=88.6m
+ep=10950 surv=  4.98s eval=10.68s best=12.56s flee=16.68s wall=89.0m
+ep=11000 surv= 20.22s eval=11.66s best=12.56s flee=16.68s wall=89.5m
+ep=11050 surv= 14.98s eval=11.95s best=12.56s flee=16.68s wall=89.9m
+ep=11100 surv=  8.93s eval=10.02s best=12.56s flee=16.68s wall=90.4m
+ep=11150 surv= 13.40s eval=11.19s best=12.56s flee=16.68s wall=90.8m
+ep=11200 surv=  8.87s eval=12.26s best=12.56s flee=16.68s wall=91.2m
+ep=11250 surv=  4.35s eval=10.18s best=12.56s flee=16.68s wall=91.7m
+ep=11300 surv=  9.52s eval=10.76s best=12.56s flee=16.68s wall=92.1m
+ep=11350 surv= 10.58s eval=9.27s best=12.56s flee=16.68s wall=92.6m
+ep=11400 surv=  4.62s eval=12.10s best=12.56s flee=16.68s wall=93.0m
+ep=11450 surv=  9.40s eval=11.53s best=12.56s flee=16.68s wall=93.5m
+ep=11500 surv=  6.00s eval=11.54s best=12.56s flee=16.68s wall=94.0m
+ep=11550 surv= 13.68s eval=11.86s best=12.56s flee=16.68s wall=94.3m
+ep=11600 surv=  5.88s eval=10.40s best=12.56s flee=16.68s wall=94.8m
+ep=11650 surv=  7.77s eval=11.27s best=12.56s flee=16.68s wall=95.2m
+ep=11700 surv=  5.97s eval=13.85s best=13.85s flee=16.68s wall=95.7m
+ep=11750 surv=  5.38s eval=11.65s best=13.85s flee=16.68s wall=96.1m
+ep=11800 surv=  5.32s eval=12.19s best=13.85s flee=16.68s wall=96.5m
+ep=11850 surv=  9.40s eval=10.93s best=13.85s flee=16.68s wall=96.9m
+ep=11900 surv=  9.42s eval=9.16s best=13.85s flee=16.68s wall=97.3m
+ep=11950 surv=  6.47s eval=12.11s best=13.85s flee=16.68s wall=97.7m
+ep=12000 surv=  9.90s eval=11.74s best=13.85s flee=16.68s wall=98.1m
+ep=12050 surv=  9.30s eval=12.36s best=13.85s flee=16.68s wall=98.6m
+ep=12100 surv=  7.27s eval=9.72s best=13.85s flee=16.68s wall=99.0m
+ep=12150 surv=  6.52s eval=10.53s best=13.85s flee=16.68s wall=99.5m
+ep=12200 surv=  9.67s eval=11.83s best=13.85s flee=16.68s wall=99.9m
+ep=12250 surv=  6.55s eval=11.96s best=13.85s flee=16.68s wall=100.4m
+ep=12300 surv= 10.35s eval=12.19s best=13.85s flee=16.68s wall=100.7m
+ep=12350 surv=  5.55s eval=10.22s best=13.85s flee=16.68s wall=101.2m
+ep=12400 surv= 10.82s eval=9.68s best=13.85s flee=16.68s wall=101.6m
+ep=12450 surv= 12.70s eval=13.86s best=13.86s flee=16.68s wall=102.0m
+ep=12500 surv= 13.02s eval=10.40s best=13.86s flee=16.68s wall=102.4m
+ep=12550 surv= 10.12s eval=10.52s best=13.86s flee=16.68s wall=102.8m
+ep=12600 surv= 20.25s eval=11.79s best=13.86s flee=16.68s wall=103.3m
+ep=12650 surv=  9.27s eval=11.98s best=13.86s flee=16.68s wall=103.7m
+ep=12700 surv= 19.28s eval=10.82s best=13.86s flee=16.68s wall=104.1m
+ep=12750 surv=  7.42s eval=9.90s best=13.86s flee=16.68s wall=104.5m
+ep=12800 surv= 10.25s eval=10.16s best=13.86s flee=16.68s wall=104.8m
+ep=12850 surv=  9.15s eval=11.45s best=13.86s flee=16.68s wall=105.3m
+ep=12900 surv=  6.57s eval=10.73s best=13.86s flee=16.68s wall=105.7m
+ep=12950 surv=  5.65s eval=12.67s best=13.86s flee=16.68s wall=106.1m
+ep=13000 surv=  5.05s eval=10.64s best=13.86s flee=16.68s wall=106.6m
+ep=13050 surv=  6.68s eval=11.14s best=13.86s flee=16.68s wall=107.0m
+ep=13100 surv=  5.80s eval=11.24s best=13.86s flee=16.68s wall=107.5m
+ep=13150 surv=  7.72s eval=11.55s best=13.86s flee=16.68s wall=107.9m
+ep=13200 surv=  6.52s eval=11.56s best=13.86s flee=16.68s wall=108.3m
+ep=13250 surv=  6.88s eval=12.33s best=13.86s flee=16.68s wall=108.8m
+ep=13300 surv=  4.60s eval=10.44s best=13.86s flee=16.68s wall=109.2m
+ep=13350 surv=  5.32s eval=11.69s best=13.86s flee=16.68s wall=109.7m
+ep=13400 surv=  7.45s eval=11.81s best=13.86s flee=16.68s wall=110.1m
+ep=13450 surv= 13.07s eval=10.95s best=13.86s flee=16.68s wall=110.6m
+ep=13500 surv=  5.80s eval=10.77s best=13.86s flee=16.68s wall=110.9m
+ep=13550 surv= 13.60s eval=11.31s best=13.86s flee=16.68s wall=111.3m
+ep=13600 surv=  9.35s eval=11.16s best=13.86s flee=16.68s wall=111.8m
+ep=13650 surv= 10.13s eval=10.17s best=13.86s flee=16.68s wall=112.1m
+ep=13700 surv= 12.80s eval=10.28s best=13.86s flee=16.68s wall=112.6m
+ep=13750 surv= 18.73s eval=9.63s best=13.86s flee=16.68s wall=113.0m
+ep=13800 surv=  7.63s eval=12.75s best=13.86s flee=16.68s wall=113.5m
+ep=13850 surv=  9.65s eval=10.42s best=13.86s flee=16.68s wall=113.9m
+ep=13900 surv=  5.30s eval=9.61s best=13.86s flee=16.68s wall=114.4m
+ep=13950 surv=  5.63s eval=10.36s best=13.86s flee=16.68s wall=114.9m
+ep=14000 surv= 11.28s eval=11.31s best=13.86s flee=16.68s wall=115.3m
+ep=14050 surv= 10.78s eval=10.82s best=13.86s flee=16.68s wall=115.8m
+ep=14100 surv= 15.32s eval=11.51s best=13.86s flee=16.68s wall=116.3m
+ep=14150 surv= 13.68s eval=12.00s best=13.86s flee=16.68s wall=116.7m
+ep=14200 surv= 15.02s eval=9.07s best=13.86s flee=16.68s wall=117.2m
+ep=14250 surv=  9.78s eval=11.97s best=13.86s flee=16.68s wall=117.7m
+ep=14300 surv=  8.80s eval=10.86s best=13.86s flee=16.68s wall=118.1m
+ep=14350 surv= 10.73s eval=10.97s best=13.86s flee=16.68s wall=118.5m
+ep=14400 surv= 10.92s eval=11.46s best=13.86s flee=16.68s wall=119.0m
+ep=14450 surv= 13.93s eval=9.80s best=13.86s flee=16.68s wall=119.4m
+ep=14500 surv= 10.43s eval=10.16s best=13.86s flee=16.68s wall=119.9m
+ep=14550 surv= 10.77s eval=10.45s best=13.86s flee=16.68s wall=120.3m
+ep=14600 surv= 17.22s eval=10.66s best=13.86s flee=16.68s wall=120.8m
+ep=14650 surv= 19.05s eval=10.46s best=13.86s flee=16.68s wall=121.3m
+ep=14700 surv=  7.57s eval=12.58s best=13.86s flee=16.68s wall=121.8m
+ep=14750 surv=  7.53s eval=12.35s best=13.86s flee=16.68s wall=122.3m
+ep=14800 surv=  4.80s eval=10.52s best=13.86s flee=16.68s wall=122.7m
+ep=14850 surv=  9.35s eval=9.76s best=13.86s flee=16.68s wall=123.2m
+ep=14900 surv= 14.68s eval=10.39s best=13.86s flee=16.68s wall=123.7m
+ep=14950 surv= 10.15s eval=11.38s best=13.86s flee=16.68s wall=124.1m
+ep=15000 surv= 12.45s eval=12.04s best=13.86s flee=16.68s wall=124.6m
+ep=15050 surv=  6.25s eval=12.53s best=13.86s flee=16.68s wall=125.1m
+ep=15100 surv= 11.25s eval=11.76s best=13.86s flee=16.68s wall=125.5m
+ep=15150 surv= 10.93s eval=12.12s best=13.86s flee=16.68s wall=125.9m
+ep=15200 surv= 13.03s eval=11.77s best=13.86s flee=16.68s wall=126.5m
+ep=15250 surv=  9.00s eval=10.38s best=13.86s flee=16.68s wall=126.9m
+ep=15300 surv=  7.05s eval=11.92s best=13.86s flee=16.68s wall=127.4m
+ep=15350 surv=  5.98s eval=9.54s best=13.86s flee=16.68s wall=127.8m
+ep=15400 surv=  9.02s eval=11.42s best=13.86s flee=16.68s wall=128.3m
+ep=15450 surv= 13.65s eval=9.67s best=13.86s flee=16.68s wall=128.7m
+ep=15500 surv= 11.10s eval=11.61s best=13.86s flee=16.68s wall=129.1m
+ep=15550 surv=  7.98s eval=11.26s best=13.86s flee=16.68s wall=129.5m
+ep=15600 surv=  6.83s eval=12.97s best=13.86s flee=16.68s wall=130.0m
+ep=15650 surv= 12.73s eval=10.28s best=13.86s flee=16.68s wall=130.4m
+ep=15700 surv=  6.85s eval=13.44s best=13.86s flee=16.68s wall=130.9m
+ep=15750 surv=  5.47s eval=11.19s best=13.86s flee=16.68s wall=131.3m
+ep=15800 surv= 10.03s eval=11.46s best=13.86s flee=16.68s wall=131.8m
+ep=15850 surv= 16.47s eval=11.45s best=13.86s flee=16.68s wall=132.2m
+ep=15900 surv=  7.50s eval=11.41s best=13.86s flee=16.68s wall=132.6m
+ep=15950 surv= 10.78s eval=10.74s best=13.86s flee=16.68s wall=133.1m
+ep=16000 surv=  5.15s eval=10.96s best=13.86s flee=16.68s wall=133.6m
+ep=16050 surv= 12.70s eval=10.61s best=13.86s flee=16.68s wall=134.1m
+ep=16100 surv=  8.55s eval=12.89s best=13.86s flee=16.68s wall=134.6m
+ep=16150 surv= 12.20s eval=12.68s best=13.86s flee=16.68s wall=135.1m
+ep=16200 surv=  5.78s eval=12.76s best=13.86s flee=16.68s wall=135.5m
+ep=16250 surv=  6.68s eval=12.53s best=13.86s flee=16.68s wall=136.0m
+ep=16300 surv= 19.80s eval=13.76s best=13.86s flee=16.68s wall=136.4m
+ep=16350 surv=  7.98s eval=11.26s best=13.86s flee=16.68s wall=136.9m
+ep=16400 surv= 11.90s eval=11.43s best=13.86s flee=16.68s wall=137.4m
+ep=16450 surv=  8.37s eval=12.37s best=13.86s flee=16.68s wall=137.9m
+ep=16500 surv=  5.77s eval=13.31s best=13.86s flee=16.68s wall=138.3m
+ep=16550 surv=  8.72s eval=10.79s best=13.86s flee=16.68s wall=138.7m
+ep=16600 surv= 11.53s eval=11.10s best=13.86s flee=16.68s wall=139.2m
+ep=16650 surv=  6.22s eval=12.65s best=13.86s flee=16.68s wall=139.6m
+ep=16700 surv=  5.15s eval=11.65s best=13.86s flee=16.68s wall=140.0m
+ep=16750 surv= 14.57s eval=10.55s best=13.86s flee=16.68s wall=140.4m
+ep=16800 surv=  7.67s eval=12.96s best=13.86s flee=16.68s wall=140.9m
+ep=16850 surv=  8.80s eval=11.47s best=13.86s flee=16.68s wall=141.3m
+ep=16900 surv= 13.75s eval=10.83s best=13.86s flee=16.68s wall=141.7m
+ep=16950 surv=  6.70s eval=10.98s best=13.86s flee=16.68s wall=142.2m
+ep=17000 surv=  9.53s eval=12.62s best=13.86s flee=16.68s wall=142.7m
+ep=17050 surv=  5.83s eval=11.73s best=13.86s flee=16.68s wall=143.1m
+ep=17100 surv=  6.78s eval=11.98s best=13.86s flee=16.68s wall=143.6m
+ep=17150 surv= 11.20s eval=11.68s best=13.86s flee=16.68s wall=144.0m
+ep=17200 surv= 19.30s eval=10.38s best=13.86s flee=16.68s wall=144.5m
+ep=17250 surv=  7.27s eval=12.41s best=13.86s flee=16.68s wall=144.9m
+ep=17300 surv= 10.17s eval=11.55s best=13.86s flee=16.68s wall=145.4m
+ep=17350 surv= 10.92s eval=10.16s best=13.86s flee=16.68s wall=145.9m
+ep=17400 surv= 16.90s eval=12.41s best=13.86s flee=16.68s wall=146.4m
+ep=17450 surv=  8.65s eval=14.18s best=14.18s flee=16.68s wall=146.9m
+ep=17500 surv=  4.82s eval=11.36s best=14.18s flee=16.68s wall=147.3m
+ep=17550 surv=  6.38s eval=11.03s best=14.18s flee=16.68s wall=147.8m
+ep=17600 surv=  6.43s eval=12.97s best=14.18s flee=16.68s wall=148.2m
+ep=17650 surv=  7.03s eval=13.93s best=14.18s flee=16.68s wall=148.7m
+ep=17700 surv=  9.48s eval=14.07s best=14.18s flee=16.68s wall=149.1m
+ep=17750 surv=  8.68s eval=11.33s best=14.18s flee=16.68s wall=149.6m
+ep=17800 surv=  7.35s eval=10.46s best=14.18s flee=16.68s wall=150.1m
+ep=17850 surv=  9.13s eval=11.97s best=14.18s flee=16.68s wall=150.5m
+ep=17900 surv=  8.02s eval=13.99s best=14.18s flee=16.68s wall=151.0m
+ep=17950 surv=  7.30s eval=11.83s best=14.18s flee=16.68s wall=151.5m
+ep=18000 surv= 11.40s eval=10.77s best=14.18s flee=16.68s wall=152.0m
+ep=18050 surv=  5.73s eval=10.41s best=14.18s flee=16.68s wall=152.5m
+ep=18100 surv= 10.17s eval=11.00s best=14.18s flee=16.68s wall=153.0m
+ep=18150 surv= 11.75s eval=10.78s best=14.18s flee=16.68s wall=153.4m
+ep=18200 surv=  7.23s eval=12.80s best=14.18s flee=16.68s wall=153.9m
+ep=18250 surv=  4.83s eval=10.55s best=14.18s flee=16.68s wall=154.4m
+ep=18300 surv= 10.77s eval=11.19s best=14.18s flee=16.68s wall=154.8m
+ep=18350 surv= 12.03s eval=10.72s best=14.18s flee=16.68s wall=155.3m
+ep=18400 surv=  9.22s eval=10.09s best=14.18s flee=16.68s wall=155.7m
+ep=18450 surv=  7.52s eval=11.52s best=14.18s flee=16.68s wall=156.2m
+ep=18500 surv= 11.70s eval=13.61s best=14.18s flee=16.68s wall=156.6m
+ep=18550 surv=  6.72s eval=10.80s best=14.18s flee=16.68s wall=157.1m
+ep=18600 surv=  6.30s eval=9.46s best=14.18s flee=16.68s wall=157.6m
+ep=18650 surv=  7.43s eval=9.13s best=14.18s flee=16.68s wall=158.0m
+ep=18700 surv= 16.90s eval=11.16s best=14.18s flee=16.68s wall=158.5m
+ep=18750 surv= 15.92s eval=11.72s best=14.18s flee=16.68s wall=158.9m
+ep=18800 surv=  7.92s eval=8.75s best=14.18s flee=16.68s wall=159.4m
+ep=18850 surv= 10.35s eval=11.47s best=14.18s flee=16.68s wall=159.9m
+ep=18900 surv=  6.53s eval=11.74s best=14.18s flee=16.68s wall=160.4m
+ep=18950 surv= 10.05s eval=11.48s best=14.18s flee=16.68s wall=160.8m
+ep=19000 surv=  5.42s eval=9.38s best=14.18s flee=16.68s wall=161.3m
+ep=19050 surv= 10.38s eval=9.99s best=14.18s flee=16.68s wall=161.7m
+ep=19100 surv= 12.38s eval=11.64s best=14.18s flee=16.68s wall=162.1m
+ep=19150 surv= 10.08s eval=11.59s best=14.18s flee=16.68s wall=162.7m
+ep=19200 surv=  9.28s eval=12.43s best=14.18s flee=16.68s wall=163.2m
+ep=19250 surv= 12.67s eval=12.02s best=14.18s flee=16.68s wall=163.6m
+ep=19300 surv= 13.22s eval=10.40s best=14.18s flee=16.68s wall=164.1m
+ep=19350 surv= 11.28s eval=11.28s best=14.18s flee=16.68s wall=164.6m
+ep=19400 surv=  8.82s eval=9.40s best=14.18s flee=16.68s wall=165.0m
+{"ep": 19401, "best_eval_s": 14.180000000000138, "last_eval_s": 10.672500000000078, "flee_ref_s": 16.684166666666755, "idle_ref_s": 7.756666666666708, "beat_flee": false, "wall_hours": 2.750993959042761, "params": 23690, "checkpoint": "dist/player_ac_long.pt", "done": true}

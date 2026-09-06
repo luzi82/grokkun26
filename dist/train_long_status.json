@@ -1,0 +1,12 @@
+{
+  "ep": 19401,
+  "best_eval_s": 14.180000000000138,
+  "last_eval_s": 10.672500000000078,
+  "flee_ref_s": 16.684166666666755,
+  "idle_ref_s": 7.756666666666708,
+  "beat_flee": false,
+  "wall_hours": 2.750993959042761,
+  "params": 23690,
+  "checkpoint": "dist/player_ac_long.pt",
+  "done": true
+}

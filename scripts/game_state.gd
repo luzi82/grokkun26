@@ -8,7 +8,7 @@ var best_time: float = 0.0
 var last_time: float = 0.0
 var last_rank: String = "SPARK"
 
-const SAVE_PATH := "user://grokkun.cfg"
+const SAVE_PATH := "user://qrokkun.cfg"
 
 
 func _ready() -> void:

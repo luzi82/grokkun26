@@ -1,4 +1,4 @@
-# Grokkun
+# Qrokkun26
 
 A tiny 2D bullet-dodging survival game. Homage to the 1999 freeware **特訓99** (Tokkun 99), with **original** art, titles, and UI (nothing is copied from 特訓99).
 
@@ -51,8 +51,8 @@ Internal resolution is **320x240**, integer-scaled to a **960x720** window (stre
 
 1. Godot **Editor -> Manage Export Templates...** and download templates matching your Godot version.
 2. **Project -> Export...**
-3. Select **Linux** -> Export to `dist/Grokkun.x86_64`.
-4. Select **Windows Desktop** -> Export to `dist/Grokkun.exe`.
+3. Select **Linux** -> Export to `dist/Qrokkun.x86_64`.
+4. Select **Windows Desktop** -> Export to `dist/Qrokkun.exe`.
 
 If templates are missing, Godot cannot bake standalone binaries. The presets are still in the project so you can export after installing templates.
 
@@ -61,8 +61,8 @@ This packaged copy does **not** include baked `dist/` binaries unless templates 
 Command-line example (templates required):
 
 ```bash
-godot --headless --path . --export-release "Linux" dist/Grokkun.x86_64
-godot --headless --path . --export-release "Windows Desktop" dist/Grokkun.exe
+godot --headless --path . --export-release "Linux" dist/Qrokkun.x86_64
+godot --headless --path . --export-release "Windows Desktop" dist/Qrokkun.exe
 ```
 
 ## License
@@ -73,32 +73,32 @@ Made by Grok Bot. Tribute to 特訓99.
 
 ## RL environment (Python)
 
-`grokkun_env/` is a Godot-free reimplementation of the playfield logic for training:
+`qrokkun_env/` is a Godot-free reimplementation of the playfield logic for training:
 
 ```bash
-python3 -m pytest grokkun_env/tests -q
-python3 -c "from grokkun_env import Grokkun26Env; e=Grokkun26Env(seed=0); print(e.reset()); print(e.step(0))"
+python3 -m pytest qrokkun_env/tests -q
+python3 -c "from qrokkun_env import Qrokkun26Env; e=Qrokkun26Env(seed=0); print(e.reset()); print(e.step(0))"
 ```
 
 See [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Godot ↔ Python monkey parity
 
-Record a seeded monkey run in Godot, then replay it in `Grokkun26Env`:
+Record a seeded monkey run in Godot, then replay it in `Qrokkun26Env`:
 
 ```bash
 # needs display / Xvfb; imports textures once via: godot --path . --headless --import
-GROKKUN_MONKEY=1 GROKKUN_SEED=42 GROKKUN_FRAMES=180 \
-  GROKKUN_OUT=$PWD/dist/monkey_seed42.jsonl \
+QROKKUN_MONKEY=1 QROKKUN_SEED=42 QROKKUN_FRAMES=180 \
+  QROKKUN_OUT=$PWD/dist/monkey_seed42.jsonl \
   godot --path . --fixed-fps 60
 
-PYTHONPATH=. python3 grokkun_env/monkey_verify.py dist/monkey_seed42.jsonl
+PYTHONPATH=. python3 qrokkun_env/monkey_verify.py dist/monkey_seed42.jsonl
 ```
 
 ### Fixed-rule sanity check
 
 ```bash
-PYTHONPATH=. python3 -m grokkun_env.sanity --policy flee --seeds 20 --compare
+PYTHONPATH=. python3 -m qrokkun_env.sanity --policy flee --seeds 20 --compare
 ```
 
 `flee` (away from nearest bullet) vs scripted spawner; `--compare` also runs `idle`.
@@ -107,7 +107,7 @@ PYTHONPATH=. python3 -m grokkun_env.sanity --policy flee --seeds 20 --compare
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements-train.txt
-PYTHONPATH=. .venv/bin/python -m grokkun_env.train_player --episodes 800 --out dist/player_mlp.pt
+PYTHONPATH=. .venv/bin/python -m qrokkun_env.train_player --episodes 800 --out dist/player_mlp.pt
 ```
 
-Checkpoint metrics: `grokkun_env/checkpoints/player_mlp_cpu_metrics.json`.
+Checkpoint metrics: `qrokkun_env/checkpoints/player_mlp_cpu_metrics.json`.
